@@ -35,8 +35,7 @@ jobs:
           run: |
             chmod +x gradlew
             ./gradlew test
-        
-        - name: Generate Test Coverage Report
+        - name: Run Test Coverage
           run: ./gradlew jacocoTestReport
 
         - name: Generate JaCoCo Badge
@@ -57,3 +56,4 @@ jobs:
           with:
             name: jacoco-report
             path: build/reports/jacoco
+  
